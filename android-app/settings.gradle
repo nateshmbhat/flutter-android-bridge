@@ -1,2 +1,10 @@
-include ':app'
+include ':app', ':flutter_module_testing_android_library', ':flutter_debug-1.0', ':mylibrary'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  '../flutter_module_android_studio/.android/include_flutter.groovy'
+))
 rootProject.name='sampleapp'
+
+include ':flutter_module_android_studio'
+project(':flutter_module_android_studio').projectDir = new File('../flutter_module_android_studio')

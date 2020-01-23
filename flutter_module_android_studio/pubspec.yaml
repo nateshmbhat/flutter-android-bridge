@@ -1,5 +1,5 @@
-name: flutter_module
-description: A new flutter module project.
+name: flutter_module_android_studio
+description: A new Flutter module.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -82,5 +82,5 @@ flutter:
   # identifiers, which may be completely independent or the same as these.
   module:
     androidX: true
-    androidPackage: com.techy.nateshmbhat.flutter_module
-    iosBundleIdentifier: com.techy.nateshmbhat.flutterModule
+    androidPackage: com.techy.nateshmbhat.flutter_module_android_studio
+    iosBundleIdentifier: com.techy.nateshmbhat.flutterModuleAndroidStudio

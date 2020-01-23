@@ -3,6 +3,10 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         applicationId "com.techy.nateshmbhat.sampleapp"
         minSdkVersion 17
@@ -11,10 +15,21 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    repositories {
+        maven {
+            url '/Users/nateshmbhat/Desktop/flutter-android-bridge/flutter_module/build/host/outputs/repo'
+        }
+        maven {
+            url 'http://download.flutter.io'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        profile {
+            initWith debug
         }
     }
 }
@@ -26,4 +41,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    debugImplementation 'com.techy.nateshmbhat.flutter_module:flutter_debug:1.0'
+    profileImplementation 'com.techy.nateshmbhat.flutter_module:flutter_profile:1.0'
+    releaseImplementation 'com.techy.nateshmbhat.flutter_module:flutter_release:1.0'
+    implementation project(path: ':flutter')
+
 }
