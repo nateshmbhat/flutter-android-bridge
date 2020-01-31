@@ -1,4 +1,4 @@
-name: flutter_module
+name: flutter_module2
 description: A new flutter module project.
 
 # The following defines the version and build number for your application.
@@ -24,11 +24,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  shared_preferences: ^0.5.6
 
 dev_dependencies:
   flutter_test:
@@ -84,5 +82,5 @@ flutter:
   # identifiers, which may be completely independent or the same as these.
   module:
     androidX: true
-    androidPackage: com.techy.nateshmbhat.flutter_module
-    iosBundleIdentifier: com.techy.nateshmbhat.flutterModule
+    androidPackage: com.example.flutter_module2
+    iosBundleIdentifier: com.example.flutterModule2
